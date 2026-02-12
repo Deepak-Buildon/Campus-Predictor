@@ -1,0 +1,12 @@
+## Machine Learning Models Used
+#️ Logistic Regression
+Logistic Regression is a supervised classification algorithm used to predict the probability of a binary outcome (Placed / Not Placed).
+It works well for structured tabular data and provides probability outputs.
+# Random Forest (For Comparison)
+Random Forest is an ensemble learning algorithm that combines multiple decision trees to improve prediction accuracy and reduce overfitting.
+It generally performs better on complex datasets.
+----------Model Performance---------
+The models were evaluated using standard classification metrics.
+# Accuracy
+Logistic Regression: 77.8%
+Random Forest: 24.5%
