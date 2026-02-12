@@ -1,5 +1,5 @@
 # ================================
-# 📌 1. IMPORT LIBRARIES
+#  1. IMPORT LIBRARIES
 # ================================
 import pandas as pd
 import numpy as np
@@ -14,7 +14,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 
 
 # ================================
-# 📌 2. CREATE SAMPLE DATASET
+#  2. CREATE SAMPLE DATASET
 # (If you don't have Kaggle dataset)
 # ================================
 
@@ -42,7 +42,7 @@ print(df.head())
 
 
 # ================================
-# 📌 3. DATA VISUALIZATION
+#  3. DATA VISUALIZATION
 # ================================
 
 sns.countplot(x="status", data=df)
@@ -51,7 +51,7 @@ plt.show()
 
 
 # ================================
-# 📌 4. SPLIT DATA
+#  4. SPLIT DATA
 # ================================
 
 X = df[["cgpa", "internships", "projects", "communication"]]
@@ -63,7 +63,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 
 # ================================
-# 📌 5. TRAIN LOGISTIC REGRESSION
+#  5. TRAIN LOGISTIC REGRESSION
 # ================================
 
 lr_model = LogisticRegression()
@@ -78,7 +78,7 @@ print(classification_report(y_test, lr_pred))
 
 
 # ================================
-# 📌 6. TRAIN RANDOM FOREST
+#  6. TRAIN RANDOM FOREST
 # ================================
 
 rf_model = RandomForestClassifier()
@@ -93,7 +93,7 @@ print(classification_report(y_test, rf_pred))
 
 
 # ================================
-# 📌 7. SAVE BEST MODEL
+#  7. SAVE BEST MODEL
 # ================================
 
 # Save Random Forest (better usually)
@@ -103,13 +103,13 @@ print("\nModel saved as placement_model.pkl")
 
 
 # ================================
-# 📌 8. TEST MANUAL PREDICTION
+#  8. TEST MANUAL PREDICTION
 # ================================
 
 sample_student = np.array([[8.2, 2, 3, 8]])  # cgpa, internships, projects, communication
 prediction = rf_model.predict(sample_student)
 
 if prediction[0] == 1:
-    print("Prediction: High Chance of Placement ✅")
+    print("Prediction: High Chance of Placement ")
 else:
-    print("Prediction: Low Chance of Placement ❌")
+    print("Prediction: Low Chance of Placement ")
